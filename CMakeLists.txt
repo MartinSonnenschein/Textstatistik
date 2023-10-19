@@ -3,4 +3,4 @@ project(Textstatistik)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Textstatistik main.cpp)
+add_executable(Textstatistik main.cpp Textstatistik.cpp Textstatistik.h)
