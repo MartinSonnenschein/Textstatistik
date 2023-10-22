@@ -11,14 +11,18 @@ int main(int argc, char* argv[]) {
         return(1);
     */
 
-    string s = "ASCDSssssd,,>,.<";
+
 
 
 
     try {
-        Textstatistik ts("/Users/timoschiemann/CLionProjects/Textstatistik/Textfiles/glocke"); /*Wieso muss der ganze Pfad angegeben werden ?*/
+        Textstatistik ts("/home/martin/Dokumente/studium_hsos/prog3/Textstatistik/Textfiles/glocke"); /*Wieso muss der ganze Pfad angegeben werden ?*/
+        //Textstatistik ts("/home/martin/Dokumente/studium_hsos/prog3/Textstatistik/Textfiles/bsp.txt");
         ts.determineFrequency();
-        ts.formateText(s);
+
+
+        ts.collectWordDialog();
+
     }catch (const runtime_error& ex){
         return 1;
     }
