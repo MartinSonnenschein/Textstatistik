@@ -6,6 +6,8 @@
 #define TEXTSTATISTIK_TEXTSTATISTIK_H
 
 #include <unordered_map>
+#include <vector>
+#include <set>
 #include "string"
 
 class Textstatistik {
@@ -13,7 +15,7 @@ private:
     std::string fileName;
     std::string outputFileName = "/home/martin/Dokumente/studium_hsos/prog3/Textstatistik/Textfiles/wordTable.txt";
     std::string text;
-    size_t n;
+    size_t n = 0;
 
 public:
     explicit Textstatistik(const std::string& _fileName);
@@ -27,11 +29,14 @@ public:
 
     //Worte sammeln
     void collectWordDialog();
-    void collect(std::string& _formattedText, std::unordered_map<std::string, int>& _words);
+    void collect(std::string& _formattedText, std::vector<std::set<std::string>>& /*std::unordered_map<std::string, int>& _words*/);
     std::string removeAllSpecialCharacters(std::string& lowText);
     std::string extractWord(std::string& _formattedText);
-    void createTable (const std::unordered_map<std::string, int>& _words);
-    void consoleLogWords(const std::unordered_map<std::string, int>& _words) const;
+    void createTable (/*const std::unordered_map<std::string, int>& _words*/ std::vector<std::set<std::string>>);
+    void consoleLogWords( std::vector<std::set<std::string>> _words /*const std::unordered_map<std::string, int>& _words*/) const;
+    void removeDoubleSpaces(std::string& text);
+    size_t count(std::vector<std::set<std::string>>& dataSet);
+
 };
 
 

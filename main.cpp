@@ -6,18 +6,9 @@ using namespace std;
 
 int main(int argc, char* argv[]) {
 
-    /*if(argc < 2)
-        cerr << "Failed. Use 'glocke', buerschafft " << endl;
-        return(1);
-    */
-
-
-
-
-
     try {
-        Textstatistik ts("/home/martin/Dokumente/studium_hsos/prog3/Textstatistik/Textfiles/glocke"); /*Wieso muss der ganze Pfad angegeben werden ?*/
-        //Textstatistik ts("/home/martin/Dokumente/studium_hsos/prog3/Textstatistik/Textfiles/bsp.txt");
+        //Textstatistik ts("/home/martin/Dokumente/studium_hsos/prog3/Textstatistik/Textfiles/glocke"); /*Wieso muss der ganze Pfad angegeben werden ?*/
+        Textstatistik ts("/home/martin/Dokumente/studium_hsos/prog3/Textstatistik/Textfiles/bsp.txt");
         ts.determineFrequency();
 
 
